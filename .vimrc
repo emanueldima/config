@@ -57,6 +57,12 @@ nmap Q gqap
 nnoremap j gj
 nnoremap k gk
 
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 " Settings for VimClojure
 let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
 let g:clj_paren_rainbow=1           " Rainbow parentheses'!
