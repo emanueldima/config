@@ -63,7 +63,25 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+nmap <silent> ,/ :let @/=""<CR>
+
 " Settings for VimClojure
 let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
 let g:clj_paren_rainbow=1           " Rainbow parentheses'!
+
+nmap ,n :NERDTreeClose<CR>:NERDTreeToggle<CR>
+nmap ,m :NERDTreeClose<CR>:NERDTreeFind<CR>
+nmap ,N :NERDTreeClose<CR>
+
+" Don't display these kinds of files
+let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
+             \ '\.o$', '\.so$', '\.egg$', '^\.git$' ]
+
+let NERDTreeShowBookmarks=1       " Show the bookmarks table on startup
+let NERDTreeShowFiles=1           " Show hidden files, too
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1          " Quit on opening files from the tree
+let NERDTreeHighlightCursorline=1 " Highlight the selected entry in the tree
+let NERDTreeMouseMode=2           " Use a single click to fold/unfold directories
+                                   " and a double click to open files
 
