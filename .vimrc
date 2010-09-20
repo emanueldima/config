@@ -48,6 +48,7 @@ if &t_Co > 2 || has("gui_running")
    syntax on
 endif
 
+inoremap jj <Esc>		
 nnoremap ; :
 
 " Use Q for formatting the current paragraph (or selection)
