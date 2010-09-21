@@ -7,6 +7,28 @@ call pathogen#runtime_append_all_bundles()
 
 set hidden
 
+set encoding=utf-8
+set scrolloff=8
+set showmode
+set showcmd
+set wildmenu
+set wildmode=list:longest
+set cursorline
+set ttyfast
+set ruler
+set laststatus=2
+
+nnoremap / /\v
+vnoremap / /\v
+
+set gdefault
+
+let mapleader = ","
+nnoremap <leader><space> :noh<cr>
+set hlsearch
+nnoremap <tab> %
+vnoremap <tab> %
+
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
 set backspace=indent,eol,start
@@ -51,6 +73,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 inoremap jj <Esc>		
+inoremap kk <Esc>		
 nnoremap ; :
 
 " Use Q for formatting the current paragraph (or selection)
@@ -88,3 +111,17 @@ let NERDTreeHighlightCursorline=1 " Highlight the selected entry in the tree
 let NERDTreeMouseMode=2           " Use a single click to fold/unfold directories
                                    " and a double click to open files
 
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+								   
+au FocusLost * :wa
