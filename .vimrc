@@ -8,12 +8,12 @@ call pathogen#runtime_append_all_bundles()
 set hidden
 
 set encoding=utf-8
-set scrolloff=8
+set scrolloff=4
 set showmode
 set showcmd
 set wildmenu
 set wildmode=list:longest
-set cursorline
+"set cursorline
 set ttyfast
 set ruler
 set laststatus=2
@@ -125,3 +125,4 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 								   
 au FocusLost * :wa
+
