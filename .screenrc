@@ -12,7 +12,8 @@ nonblock on
 # Window list at the bottom.
 hardstatus alwayslastline
 # greyscale window list with datetime at right
-hardstatus string '%{= d}%-Lw%{= r}%50>%n%f* %t%{= d}%+Lw%< %{= d}%-=%D %d %M %Y %c:%s%{-}'
+# hardstatus string '%{= d}%-Lw%{= r}%50>%n%f* %t%{= d}%+Lw%< %{= d}%-=%D %d %M %Y %c:%s%{-}'
+hardstatus string '%{= d}%-Lw%{= r}%50>%n%f* %t%{= d}%+Lw%< %{= d}%{-}'
 
 screen -t one 1
 
