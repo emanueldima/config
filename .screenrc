@@ -14,9 +14,7 @@ hardstatus alwayslastline
 # greyscale window list with datetime at right
 hardstatus string '%{= d}%-Lw%{= r}%50>%n%f* %t%{= d}%+Lw%< %{= d}%-=%D %d %M %Y %c:%s%{-}'
 
-screen -t repl 2
+screen -t one 1
 
-screen -t editor 1
-
-screen -t bash 0
+screen -t zero 0
 
