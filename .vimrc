@@ -63,10 +63,6 @@ filetype on
 filetype plugin on
 filetype indent on
 
-if &t_Co >= 256 || has("gui_running")
-   colorscheme mustang
-endif
-
 if &t_Co > 2 || has("gui_running")
    " switch syntax highlighting on, when the terminal has colors
    syntax on
