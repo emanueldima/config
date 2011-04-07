@@ -1,4 +1,5 @@
 set nocompatible
+set t_Co=256
 
 " Use pathogen to easily modify the runtime path to include all
 " plugins under the ~/.vim/bundle directory
