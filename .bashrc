@@ -4,7 +4,7 @@ export GOROOT=/usr/local/Cellar/go/1.0.3
 export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/GoProjects
 
-alias ll='ls -Gl'
+alias ll='ls -Ghl'
 
 svndiff()
 {
