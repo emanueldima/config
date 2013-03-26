@@ -16,8 +16,8 @@ let b:undo_indent = "setlocal ai< si< lw< et< sts< sw< inde< indk<"
 
 setlocal autoindent expandtab nosmartindent
 
-setlocal softtabstop=2
-setlocal shiftwidth=2
+setlocal softtabstop=4
+setlocal shiftwidth=4
 
 setlocal indentkeys=!,o,O
 
