@@ -3,11 +3,11 @@ export PS1='--- \[\e[1;30m\][\[\e[0m\]\u\[\e[1;30m\]@\[\e[0m\]\H \[\e[0;31m\]\W\
 
 export GOROOT=/usr/local/Cellar/go/1.0.3
 export PATH=$PATH:$GOROOT/bin
-export GOPATH=$HOME/GoProjects
+export GOPATH=$HOME/Projects/GoProjects
 
 alias ll='ls -Ghl'
 
 svndiff()
 {
-  svn diff "${@}" | colordiff
+  svn diff "${@}" | colordiff | less -R
 }
