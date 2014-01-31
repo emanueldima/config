@@ -12,3 +12,12 @@ svndiff()
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+shopt -s histappend
+export HISTIGNORE="&:exit"
+export HISTFILESIZE=5000
+export HISTSIZE=5000
+
