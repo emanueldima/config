@@ -20,6 +20,7 @@
 	co = checkout
 	br = branch
 	fe = fetch
+	up = "!git remote update -p; git merge --ff-only @{u}"
 [http]
 	postBuffer = 524288000
 [diff]
