@@ -1,8 +1,10 @@
 export PS1='--- \[\e[1;30m\][\[\e[0m\]\u\[\e[1;30m\]@\[\e[0m\]\H \[\e[0;31m\]\W\[\e[1;30m\]] \d :: \t ---\n$\[\e[0m\] '
 
-export PATH="/Applications/anaconda/bin:/usr/local/bin:$PATH"
-export GOPATH=$HOME/Projects/GoProjects
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home
+export JAVA_HOME=`/usr/libexec/java_home`
 
+export PATH="$JAVA_HOME/bin:/Applications/anaconda/bin:/usr/local/bin:$PATH"
+export GOPATH=$HOME/Projects/GoProjects
 alias ll='ls -Ghl'
 
 svndiff()
