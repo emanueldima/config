@@ -4,7 +4,7 @@ export PS1='--- \[\e[1;30m\][\[\e[0m\]\u\[\e[1;30m\]@\[\e[0m\]\H \[\e[0;31m\]\W\
 export JAVA_HOME=`/usr/libexec/java_home`
 
 export PATH="$JAVA_HOME/bin:/Applications/anaconda/bin:/usr/local/bin:$PATH"
-export GOPATH=$HOME/Projects/GoProjects
+export GOPATH=$HOME/Projects/Go
 alias ll='ls -Ghl'
 
 svndiff()
