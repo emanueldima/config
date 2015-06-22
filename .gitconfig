@@ -7,21 +7,25 @@
 	default = simple
 [core]
 	excludesfile = /Users/edima/.gitignore_global
+	pager = less -+$LESS -FRX
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
 [alias]
-	ll = log --pretty=oneline --abbrev-commit --decorate --branches --graph --remotes --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	ll = log --pretty=oneline --abbrev-commit --decorate --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	llr = log --pretty=oneline --abbrev-commit --decorate --branches --graph --remotes --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	st = status -s -b
 	co = checkout
 	br = branch
-	fe = fetch
+	fe = fetch --all
 	up = "!git remote update -p; git merge --ff-only @{u}"
 [http]
 	postBuffer = 524288000
 [diff]
 	renameLimit = 6000
+[rerere]
+	enabled = true
