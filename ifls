@@ -1,0 +1,2 @@
+#!/bin/sh
+ifconfig | awk '/^[[:alpha:]]+[0-9]+:/ { sub(/:/,"",$1); iface=$1 } /^[[:space:]]*inet / { split($2, a, "/"); print iface" : "a[1] }'
