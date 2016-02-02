@@ -20,7 +20,7 @@ svndiff()
 export JAVA_HOME=`/usr/libexec/java_home`
 export GOPATH=$HOME/Projects/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$JAVA_HOME/bin:/Applications/anaconda/bin:$PATH:$GOPATH/bin:"
+export PATH="$JAVA_HOME/bin:$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin:"
 
 # $(docker-machine env dev)
 
@@ -33,4 +33,3 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='vim'
 fi
-
