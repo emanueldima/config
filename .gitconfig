@@ -16,11 +16,12 @@
 	trustExitCode = true
 
 [alias]
-	ll = log --pretty=oneline --abbrev-commit --decorate --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	l = log -n 30 --pretty=oneline --abbrev-commit --decorate --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	ll =  log --pretty=oneline --abbrev-commit --decorate --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	llr = log --pretty=oneline --abbrev-commit --decorate --branches --graph --remotes --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	st = status -s -b
+	b = branch -vav
 	co = checkout
-	br = branch
 	fe = fetch --all
 	up = "!git remote update -p; git merge --ff-only @{u}"
 [http]
