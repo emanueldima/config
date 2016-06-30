@@ -20,7 +20,7 @@ svndiff()
 export JAVA_HOME=`/usr/libexec/java_home`
 export GOPATH=$HOME/Projects/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$JAVA_HOME/bin:$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin:"
+export PATH="$JAVA_HOME/bin:$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cargo/bin"
 
 # $(docker-machine env dev)
 
