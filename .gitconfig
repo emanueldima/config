@@ -5,6 +5,10 @@
 	email = emanueldima@gmail.com
 [push]
 	default = simple
+[pull]
+	rebase = true
+[merge]
+	ff = only
 [core]
 	excludesfile = /Users/edima/.gitignore_global
 	pager = less -+$LESS -FRX
