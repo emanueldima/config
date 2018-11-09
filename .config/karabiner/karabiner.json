@@ -1,7 +1,7 @@
 {
     "global": {
         "check_for_updates_on_startup": true,
-        "show_in_menu_bar": true,
+        "show_in_menu_bar": false,
         "show_profile_name_in_menu_bar": false
     },
     "profiles": [
@@ -193,18 +193,18 @@
                     "simple_modifications": [
                         {
                             "from": {
-                                "key_code": "left_gui"
+                                "key_code": "left_alt"
                             },
                             "to": {
-                                "key_code": "left_alt"
+                                "key_code": "left_gui"
                             }
                         },
                         {
                             "from": {
-                                "key_code": "left_alt"
+                                "key_code": "left_gui"
                             },
                             "to": {
-                                "key_code": "left_gui"
+                                "key_code": "left_alt"
                             }
                         },
                         {
@@ -296,7 +296,7 @@
                         "key_code": "f10"
                     },
                     "to": {
-                        "key_code": "f10"
+                        "consumer_key_code": "mute"
                     }
                 },
                 {
@@ -304,7 +304,7 @@
                         "key_code": "f11"
                     },
                     "to": {
-                        "key_code": "f11"
+                        "consumer_key_code": "volume_decrement"
                     }
                 },
                 {
@@ -312,7 +312,7 @@
                         "key_code": "f12"
                     },
                     "to": {
-                        "key_code": "f12"
+                        "consumer_key_code": "volume_increment"
                     }
                 }
             ],

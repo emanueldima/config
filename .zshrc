@@ -20,7 +20,7 @@ svndiff()
 export JAVA_HOME=`/usr/libexec/java_home`
 export GOPATH=$HOME/Projects/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$JAVA_HOME/bin:$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin:$HOME/.cargo/bin"
+export PATH="$JAVA_HOME/bin:$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin"
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 export PYTHONSTARTUP=~/config/python-startup.py
 
