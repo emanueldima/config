@@ -17,12 +17,13 @@ svndiff()
   svn diff "${@}" | colordiff | less -R
 }
 
-export JAVA_HOME=`/usr/libexec/java_home`
-export GOPATH=$HOME/Projects/Go
+#export JAVA_HOME=`/usr/libexec/java_home`
+#export GOPATH=$HOME/Projects/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$JAVA_HOME/bin:$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin"
+export PATH="$HOME/.cargo/bin:$PATH"
+#export PATH="$JAVA_HOME/bin:$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin"
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
-export PYTHONSTARTUP=~/config/python-startup.py
+export PYTHONSTARTUP=~/.dotfiles/python-startup.py
 
 # $(docker-machine env dev)
 

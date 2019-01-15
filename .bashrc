@@ -24,3 +24,5 @@ export HISTFILESIZE=5000
 export HISTSIZE=5000
 
 # $(docker-machine env dev)
+
+export PATH="$HOME/.cargo/bin:$PATH"
