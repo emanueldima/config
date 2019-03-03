@@ -9,6 +9,8 @@
 	rebase = true
 [merge]
 	ff = only
+[rebase]
+    autostash = true
 [core]
 	excludesfile = /Users/edima/.gitignore_global
 	pager = less -+$LESS -FRX
