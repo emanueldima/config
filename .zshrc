@@ -17,8 +17,18 @@ svndiff()
   svn diff "${@}" | colordiff | less -R
 }
 
-#export JAVA_HOME=`/usr/libexec/java_home`
-#export GOPATH=$HOME/Projects/Go
+cdgl()
+{
+  cd "$HOME/Projects/gitlab.wl/${@}"
+}
+
+cdgh()
+{
+  cd "$HOME/Projects/github.com/${@}"
+}
+
+export JAVA_HOME=`/usr/libexec/java_home`
+export GOPATH=$HOME/Projects/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.cargo/bin:$PATH"
 #export PATH="$JAVA_HOME/bin:$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin"
