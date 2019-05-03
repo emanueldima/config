@@ -30,7 +30,7 @@ cdgh()
 export JAVA_HOME=`/usr/libexec/java_home`
 export GOPATH=$HOME/Projects/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:/usr/local/opt/ruby/bin:$PATH"
 #export PATH="$JAVA_HOME/bin:$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin"
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 export PYTHONSTARTUP=~/.dotfiles/python-startup.py
