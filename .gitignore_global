@@ -1,0 +1,12 @@
+*.class
+*.classpath
+*.iml
+*/target/*
+*node_modules*
+.DS_Store
+.DS_Store?
+.DT_Store
+.Spotlight-V100
+.Trashes
+.classpath
+.idea
