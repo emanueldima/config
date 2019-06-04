@@ -1,7 +1,7 @@
 *.class
 *.classpath
 *.iml
-*/target/*
+/target/*
 *node_modules*
 .DS_Store
 .DS_Store?
