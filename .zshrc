@@ -12,6 +12,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+#kill zoomus local server
+lsof -i :19421 | grep ZoomOp | cut -f2 -d' ' | xargs kill -9
+
 svndiff()
 {
   svn diff "${@}" | colordiff | less -R
