@@ -30,7 +30,7 @@ cdgh()
   cd "$HOME/Projects/github.com/${@}"
 }
 
-export JAVA_HOME=`/usr/libexec/java_home`
+export JAVA_HOME=`/usr/libexec/java_home 2>/dev/null`
 export GOPATH=$HOME/Projects/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.cargo/bin:/usr/local/opt/ruby/bin:$PATH"
