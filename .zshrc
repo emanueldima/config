@@ -30,6 +30,16 @@ cdgh()
   cd "$HOME/Projects/github.com/${@}"
 }
 
+lr()
+{
+	for f in $*; do
+		echo;
+		echo --- $f;
+		grep --color=always -E 'pub\s|impl\s' $f | sed s/{//;
+	done
+}
+
+
 export JAVA_HOME=`/usr/libexec/java_home 2>/dev/null`
 export GOPATH=$HOME/Projects/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
