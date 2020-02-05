@@ -40,7 +40,9 @@ lr()
 }
 
 
-export JAVA_HOME=`/usr/libexec/java_home 2>/dev/null`
+#export JAVA_HOME=`/usr/libexec/java_home 2>/dev/null`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export GPG_TTY=$(tty);
 export GOPATH=$HOME/Projects/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.cargo/bin:/usr/local/opt/ruby/bin:$PATH"

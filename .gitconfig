@@ -3,6 +3,7 @@
 [user]
 	name = Emanuel Dima
 	email = emanueldima@gmail.com
+	signingkey = F6AB969B322C6290
 [push]
 	default = simple
 [pull]
