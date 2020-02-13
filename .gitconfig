@@ -36,6 +36,7 @@
 	postBuffer = 524288000
 [diff]
 	renameLimit = 6000
+	noprefix = true
 [rerere]
 	enabled = true
 [pager]
