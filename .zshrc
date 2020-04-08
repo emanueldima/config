@@ -12,6 +12,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+formatxml () { xmllint --format $1 > $1.formatted; mv $1.formatted $1; }
+
 #kill zoomus local server
 lsof -i :19421 | grep ZoomOp | cut -f2 -d' ' | xargs kill -9
 
@@ -40,8 +42,7 @@ lr()
 }
 
 
-#export JAVA_HOME=`/usr/libexec/java_home 2>/dev/null`
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
 export GPG_TTY=$(tty);
 export GOPATH=$HOME/Projects/Go
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
