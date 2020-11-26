@@ -17,39 +17,12 @@ formatxml () { xmllint --format $1 > $1.formatted; mv $1.formatted $1; }
 #kill zoomus local server
 lsof -i :19421 | grep ZoomOp | cut -f2 -d' ' | xargs kill -9
 
-svndiff()
-{
-  svn diff "${@}" | colordiff | less -R
-}
-
-cdgl()
-{
-  cd "$HOME/Projects/gitlab.wl/${@}"
-}
-
-cdgh()
-{
-  cd "$HOME/Projects/github.com/${@}"
-}
-
-lr()
-{
-	for f in $*; do
-		echo;
-		echo --- $f;
-		grep --color=always -E 'pub\s|impl\s' $f | sed s/{//;
-	done
-}
-
-
+export PYTHONSTARTUP="$HOME/.dotfiles/python-startup.py"
 export JAVA_HOME=`/usr/libexec/java_home -v 11`
 export GPG_TTY=$(tty);
 export GOPATH=$HOME/Projects/Go
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$HOME/.cargo/bin:/usr/local/opt/ruby/bin:$PATH"
-#export PATH="$JAVA_HOME/bin:$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin"
+export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
-export PYTHONSTARTUP=~/.dotfiles/python-startup.py
 
 # $(docker-machine env dev)
 

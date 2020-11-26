@@ -59,3 +59,7 @@
   defaults write -g ApplePressAndHoldEnabled -bool false
   defaults write -g InitialKeyRepeat -int 10
   defaults write -g KeyRepeat -int 1
+
+  echo "Dark for Dock, Menu, etc but all others Light."
+  echo "You need to set theme to Light, then run:"
+  echo '`defaults write -g NSRequiresAquaSystemAppearance -bool Yes`'
