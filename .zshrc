@@ -21,17 +21,12 @@ export PYTHONSTARTUP="$HOME/.dotfiles/python-startup.py"
 export JAVA_HOME=`/usr/libexec/java_home -v 11`
 export GPG_TTY=$(tty);
 export GOPATH=$HOME/Projects/Go
-export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
+export PATH="$HOME/.cargo/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # $(docker-machine env dev)
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
+export EDITOR='vim'
