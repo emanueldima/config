@@ -10,14 +10,17 @@
 	rebase = true
 [merge]
 	ff = only
+    conflictstyle = diff3
 [rebase]
     autostash = true
 [core]
 	excludesfile = /Users/edima/.gitignore_global
-#	pager = less -+$LESS -FRX
+	# pager = less -+$LESS -FRX
+	pager = delta
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
+
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -37,6 +40,7 @@
 [diff]
 	renameLimit = 6000
 	noprefix = true
+    colorMoved = default
 
 [rerere]
 	enabled = true
@@ -44,27 +48,22 @@
 [commit]
 	gpgsign = true
 
-[pager]
-	diff = diff-so-fancy | less --tabs=1,5 -RFX
-	show = diff-so-fancy | less --tabs=1,5 -RFX
+# [pager]
+# 	diff = diff-so-fancy | less --tabs=1,5 -RFX
+# 	show = diff-so-fancy | less --tabs=1,5 -RFX
+
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
 
-# the following is for git-delta
-[core]
-    pager = delta
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    diff-highlight = true
+    line-numbers = true
+    #diff-so-fancy = true
+    # side-by-side = true
 
 [interactive]
     diffFilter = delta --color-only
-
-[delta]
-    navigate = true  # use n and N to move between diff sections
-
-[merge]
-    conflictstyle = diff3
-
-[diff]
-    colorMoved = default
