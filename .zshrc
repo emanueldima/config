@@ -17,6 +17,8 @@ formatxml () { xmllint --format $1 > $1.formatted; mv $1.formatted $1; }
 #kill zoomus local server
 lsof -i :19421 | grep ZoomOp | cut -f2 -d' ' | xargs kill -9
 
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 export PYTHONSTARTUP="$HOME/.dotfiles/python-startup.py"
 export JAVA_HOME=`/usr/libexec/java_home -v 11`
 export GPG_TTY=$(tty);
