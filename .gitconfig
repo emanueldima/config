@@ -2,8 +2,8 @@
 	ui = auto
 [user]
 	name = Emanuel Dima
-	email = emanueldima@gmail.com
-	signingkey = F6AB969B322C6290
+        email = emanueldima@gmail.com
+        signingkey = F6AB969B322C6290
 [push]
 	default = simple
 [pull]
@@ -15,8 +15,8 @@
     autostash = true
 [core]
 	excludesfile = /Users/edima/.gitignore_global
-	# pager = less -+$LESS -FRX
-	pager = delta
+	pager = less -+$LESS -FRX
+	#pager = delta
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -26,21 +26,31 @@
 	trustExitCode = true
 
 [alias]
-	l = log -n 15 --pretty=oneline --abbrev-commit --decorate --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	ls = log -n 10 --pretty=oneline --abbrev-commit --decorate --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	l = log -n 20 --pretty=oneline --abbrev-commit --decorate --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	ll =  log --pretty=oneline --abbrev-commit --decorate --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --date=short
 	llr = log --pretty=oneline --abbrev-commit --decorate --branches --graph --remotes --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --date=short
 	st = status -s -b
-	s = "!echo; git st; echo; git l"
+	s = "!echo; git st; echo; git ls"
+	d = diff -w --minimal
 	b = branch -v
 	co = checkout
 	fe = fetch --all
 	up = "!git remote update -p; git merge --ff-only @{u}"
+        push-up = "!git push -u origin `git b --show-current`"
+        my-branches = "!git for-each-ref --format=\"%(refname:lstrip=2)\" refs/heads/ | grep edima"
+	main-branch = "!git symbolic-ref refs/remotes/origin/HEAD | cut -f4- -d'/'"
+        rebase-my-branches = "!for branch in $(git my-branches); do echo; echo ---- $branch ----; git rebase origin/$(git main-branch) \"$branch\" 2>/dev/null || git rebase --abort; done; git co $(git main-branch); git s"
+        delete-merged-branches = "!git branch --format=\"%(refname:lstrip=2)\" --merged | grep edima | xargs echo git branch -d"
+        delete-merged-branches-yes = "!git branch --format=\"%(refname:lstrip=2)\" --merged | grep edima | xargs git branch -d"
+		get-gh-id = "!git remote get-url origin | grep github | cut -f2 -d: | sed s/.git$//"
+        pr = "!git push-up; open https://github.com/`git get-gh-id`/pull/new/`git b --show-current`"
 [http]
 	postBuffer = 524288000
 [diff]
 	renameLimit = 6000
 	noprefix = true
-    colorMoved = default
+	colorMoved = default
 
 [rerere]
 	enabled = true
@@ -48,9 +58,9 @@
 [commit]
 	gpgsign = true
 
-# [pager]
-# 	diff = diff-so-fancy | less --tabs=1,5 -RFX
-# 	show = diff-so-fancy | less --tabs=1,5 -RFX
+[pager]
+ 	diff = delta | less --tabs=1,5 -RFX
+#q 	show = diff-so-fancy | less --tabs=1,5 -RFX
 
 [color "diff-highlight"]
 	oldNormal = red bold
