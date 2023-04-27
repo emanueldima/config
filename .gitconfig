@@ -2,15 +2,15 @@
 	ui = auto
 [user]
 	name = Emanuel Dima
-        email = emanueldima@gmail.com
-        signingkey = F6AB969B322C6290
+	email = emanueldima@gmail.com
+	signingkey = F6AB969B322C6290
 [push]
 	default = simple
 [pull]
 	rebase = true
 [merge]
 	ff = only
-    conflictstyle = diff3
+	conflictstyle = diff3
 [rebase]
     autostash = true
 [core]
@@ -51,6 +51,7 @@
 	renameLimit = 6000
 	noprefix = true
 	colorMoved = default
+	external = difft
 
 [rerere]
 	enabled = true
