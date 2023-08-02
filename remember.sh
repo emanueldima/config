@@ -1,0 +1,2 @@
+taskpolicy -b winpos
+networkQuality
