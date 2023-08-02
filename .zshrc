@@ -29,10 +29,13 @@ hl() { grep --color=always "$1\|$" }
 
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias dc='SSH_AUTH_SOCK="/run/host-services/ssh-auth.sock" docker compose '
+alias mc='mc --nosubshell'
+alias gcce='gcloud compute'
 
 export BAT_PAGER=""
 export BAT_STYLE=changes,rule,numbers,snip
-alias cat='bat --theme "Monokai Extended Bright"'
+alias cat="bat --theme=OneHalfDark"
+#alias cat="bat --theme=GitHub"
 
 export DOCKER_BUILDKIT=1
 export JAVA_HOME=`/usr/libexec/java_home -v 11`
@@ -40,14 +43,15 @@ export GPG_TTY=$(tty)
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/usr/local/bin"
-export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.cargo/bin:$HOME/go/bin"
 
 ssh-add --apple-use-keychain 2>/dev/null
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export EDITOR='vim'
-export GIT_EXTERNAL_DIFF=difft
+
+export DFT_TAB_WIDTH=4
 
 #source /Users/edima/.venv-global/bin/activate
 
@@ -58,3 +62,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source /Users/edima/.config/broot/launcher/bash/br
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/edima/.google-cloud-sdk/path.zsh.inc' ]; then . '/Users/edima/.google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/edima/.google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/edima/.google-cloud-sdk/completion.zsh.inc'; fi
