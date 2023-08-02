@@ -2,8 +2,8 @@
     ui = auto
 [user]
     name = Emanuel Dima
-    email = emanueldima@gmail.com
-    signingkey = F6AB969B322C6290
+    email = emanuel@explosion.ai
+    signingkey = 1B47F0919685D5F4
 [push]
     default = simple
 [pull]
@@ -17,13 +17,6 @@
     excludesfile = /Users/edima/.gitignore_global
     pager = less -+$LESS -FRX
     #pager = delta
-[difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path =
-
-[mergetool "sourcetree"]
-    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true
 
 [alias]
     ls = log -n 10 --pretty=oneline --abbrev-commit --decorate --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
@@ -32,7 +25,7 @@
     llr = log --pretty=oneline --abbrev-commit --decorate --branches --graph --remotes --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --date=short
     st = status -s -b
     s = "!echo; git st; echo; git ls"
-    d = diff -w --minimal
+	d = "!GIT_EXTERNAL_DIFF=difft git diff -w --minimal"
     b = branch -v
     co = checkout
     fe = fetch --all
@@ -48,11 +41,6 @@
     wip = "!git add --all; git commit -m WIP"
 [http]
     postBuffer = 524288000
-[diff]
-    renameLimit = 6000
-    noprefix = true
-    colorMoved = default
-#    external = difft
 
 [rerere]
     enabled = true
@@ -60,22 +48,9 @@
 [commit]
     gpgsign = true
 
-[pager]
-# 	diff = delta | less --tabs=1,5 -RFX
-# 	show = diff-so-fancy | less --tabs=1,5 -RFX
-
 [color "diff-highlight"]
     oldNormal = red bold
     oldHighlight = red bold 52
     newNormal = green bold
     newHighlight = green bold 22
 
-[delta]
-    navigate = true  # use n and N to move between diff sections
-    diff-highlight = true
-    line-numbers = true
-    #diff-so-fancy = true
-    # side-by-side = true
-
-[interactive]
-    diffFilter = delta --color-only
