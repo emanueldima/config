@@ -25,7 +25,8 @@
     llr = log --pretty=oneline --abbrev-commit --decorate --branches --graph --remotes --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --date=short
     st = status -s -b
     s = "!echo; git st; echo; git ls"
-	d = "!GIT_EXTERNAL_DIFF=difft git diff -w --minimal"
+    d = "!GIT_EXTERNAL_DIFF=difft git diff -w --minimal"
+    dh = "!GIT_EXTERNAL_DIFF=difft git diff -w --minimal HEAD"
     b = branch -v
     co = checkout
     fe = fetch --all
@@ -54,3 +55,5 @@
     newNormal = green bold
     newHighlight = green bold 22
 
+[submodule]
+	recurse = true

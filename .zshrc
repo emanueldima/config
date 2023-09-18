@@ -10,7 +10,7 @@ fi
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 compdef _gnu_generic delta
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -51,6 +51,7 @@ export LC_ALL=en_US.UTF-8
 export EDITOR='vim'
 
 export DFT_TAB_WIDTH=4
+export DFT_DISPLAY=side-by-side-show-both
 
 #source /Users/edima/.venv-global/bin/activate
 
