@@ -53,6 +53,8 @@ export EDITOR='vim'
 export DFT_TAB_WIDTH=4
 export DFT_DISPLAY=side-by-side-show-both
 
+export RUST_BACKTRACE=1
+
 #source /Users/edima/.venv-global/bin/activate
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
