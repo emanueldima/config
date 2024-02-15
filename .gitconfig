@@ -3,7 +3,8 @@
 [user]
     name = Emanuel Dima
     email = emanueldima@gmail.com
-    signingkey = F6AB969B322C6290
+    signingkey = ~/.ssh/id_rsa.pub
+    #signingkey = F6AB969B322C6290
     #email = emanuel@explosion.ai
     #signingkey = 1B47F0919685D5F4
 [push]
@@ -42,6 +43,7 @@
     get-gh-id = "!git remote get-url origin | grep github | cut -f2 -d: | sed s/.git$//"
     pr = "!git push-up; open https://github.com/`git get-gh-id`/pull/new/`git b --show-current`"
     wip = "!git add --all; git commit -m WIP"
+    a = blame -w -C -C -C
 [http]
     postBuffer = 524288000
 
@@ -59,3 +61,7 @@
 
 [submodule]
 	recurse = true
+[branch]
+	sort = -committerdate
+[gpg]
+	format = ssh
